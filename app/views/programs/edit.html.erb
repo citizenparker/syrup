@@ -1,0 +1,15 @@
+<h1>Edit Program</h1>
+
+<%= form_for @program do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :capacity %>
+    <%= f.number_field :capacity %>
+  </div>
+
+  <%= f.submit "Save" %>
+<% end %>

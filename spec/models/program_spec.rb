@@ -1,7 +1,5 @@
 require 'spec_helper'
 
 describe Program do
-  it "exists" do
-    Program.new.should_not be_nil
-  end
+  pending "add some examples to (or delete) #{__FILE__}"
 end
