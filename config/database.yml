@@ -1,0 +1,11 @@
+development: &development
+  adapter: postgresql
+  username: pair
+  encoding: utf8
+  template: template0
+  port: 5433
+  database: syrup_development
+
+test: &test
+  <<: *development
+  database: syrup_test
