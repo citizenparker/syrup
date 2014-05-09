@@ -7,7 +7,7 @@ Syrup requires a running instance of Postgres to be setup
 
 ```
 > bundle
-> rake db:create
+> rake db:create db:migrate
 ```
 
 ## Running Tests
