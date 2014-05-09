@@ -12,4 +12,4 @@ Syrup requires a running instance of Postgres to be setup
 
 ## Running Tests
 
-`rake` (or the more verbose `rake spec` will run all tests.
+`rake` (or the more verbose `rake spec`) will run all tests.
