@@ -33,7 +33,7 @@ describe "program Create/Read/Update", :type => :feature do
 
   describe "edit" do
     it "allows you to edit the program" do
-      program = FactoryGirl.create(:program, :name => "PenPals", :capacity => 25)
+      program = FactoryGirl.create(:program, :name => "PenPals", :capacity => 25, :minimum_age => 10, :maximum_age => 15)
       visit(edit_program_path(program))
 
       page.should have_field("Name", :with => "PenPals")
@@ -41,12 +41,16 @@ describe "program Create/Read/Update", :type => :feature do
 
       fill_in("Capacity", :with => 30)
       fill_in("Name", :with => "PlayPals")
+      fill_in("Minimum Age", :with => 18)
+      fill_in("Maximum Age", :with => 24)
 
       click_on("Save")
       current_path.should == program_path(program)
 
       page.should have_content("PlayPals")
       page.should have_content(30)
+      page.should have_content(18)
+      page.should have_content(24)
     end
   end
 end

@@ -1,4 +1,6 @@
 class ProgramsController < ApplicationController
+  add_breadcrumb "Home", :root_path
+  add_breadcrumb "Programs", :programs_path
   def index
     @programs = Program.all.order(:created_at => :desc)
   end
@@ -19,6 +21,6 @@ class ProgramsController < ApplicationController
   end
 
   def _program_params
-    params[:program].permit(:name, :capacity)
+    params[:program].permit(:name, :capacity, :minimum_age, :maximum_age)
   end
 end

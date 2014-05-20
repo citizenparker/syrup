@@ -1,15 +1,10 @@
 <h1>Edit Program</h1>
 
-<%= form_for @program do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div>
-    <%= f.label :capacity %>
-    <%= f.number_field :capacity %>
-  </div>
+<%= simple_form_for @program do |f| %>
+  <%= f.input :name %>
+  <%= f.input :capacity %>
+  <%= f.input :minimum_age, :label => "Minimum Age" %>
+  <%= f.input :maximum_age, :label => "Maximum Age" %>
 
   <%= f.submit "Save" %>
 <% end %>

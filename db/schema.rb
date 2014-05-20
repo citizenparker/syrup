@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20140508214215) do
   create_table "programs", force: true do |t|
     t.string   "name"
     t.integer  "capacity"
+    t.integer  "minimum_age"
+    t.integer  "maximum_age"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
