@@ -13,7 +13,7 @@ require 'spec_helper'
 describe ProgramsHelper do
   describe "#program_capacity" do
     it "provides the program capacity when there is one" do
-      program = Program.new(:capacity => 25)
+      program = Program.new(:maximum_participants => 25)
       helper.program_capacity(program).should == 25
     end
 

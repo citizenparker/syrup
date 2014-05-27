@@ -17,10 +17,11 @@ ActiveRecord::Schema.define(version: 20140508214215) do
   enable_extension "plpgsql"
 
   create_table "programs", force: true do |t|
-    t.string   "name"
-    t.integer  "capacity"
+    t.string   "name",                 null: false
+    t.integer  "maximum_participants", null: false
     t.integer  "minimum_age"
     t.integer  "maximum_age"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

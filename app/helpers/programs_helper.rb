@@ -1,5 +1,5 @@
 module ProgramsHelper
   def program_capacity(program)
-    program.capacity || "Unlimited"
+    program.maximum_participants || "Unlimited"
   end
 end

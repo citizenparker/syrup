@@ -2,6 +2,9 @@
 
 FactoryGirl.define do
   factory :program do
-    name "MyString"
+    name "Cool Program"
+    maximum_participants 15
+    minimum_age 5
+    maximum_age 10
   end
 end

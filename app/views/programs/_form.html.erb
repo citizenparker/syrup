@@ -1,0 +1,16 @@
+<div class='row'>
+  <div class='col-md-6'>
+    <div class='panel panel-info'>
+      <div class='panel-body'>
+        <%= simple_form_for @program do |f| %>
+          <%= f.input :name %>
+          <%= f.input :maximum_participants, :label => "Maximum Number of Participants" %>
+          <%= f.input :minimum_age, :label => "Minimum Age" %>
+          <%= f.input :maximum_age, :label => "Maximum Age" %>
+
+          <%= f.button :submit, "Save" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
