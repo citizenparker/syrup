@@ -7,7 +7,6 @@ gem "uglifier", ">= 1.3.0"
 gem "jquery-rails"
 gem "jbuilder", "~> 2.0"
 gem "rake", "~> 10.3"
-gem "simple_form"
 gem "breadcrumbs_on_rails"
 
 # Use unicorn as the app server

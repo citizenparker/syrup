@@ -20,4 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      program:
+        maximum_participants: "Maximum Participants"
+        minimum_age: "Minimum Age"
+        maximum_age: "Maximum Age"

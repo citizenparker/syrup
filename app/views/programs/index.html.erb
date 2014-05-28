@@ -1,9 +1,13 @@
 <h2>Programs</h2>
 
-<ul>
-<% @programs.each do |program| %>
-  <li><%= link_to program.name, program_path(program) %></li>
-<% end %>
-</ul>
+<div class='row'>
+  <div class='col-md-6'>
+    <ul class='list-group'>
+      <% @programs.each do |program| %>
+        <li class='list-group-item'><%= link_to program.name, program_path(program) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 <%= link_to "New Program", new_program_path %>
