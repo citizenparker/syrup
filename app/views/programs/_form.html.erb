@@ -3,6 +3,7 @@
     <div class='panel panel-info'>
       <div class='panel-body'>
         <%= form_for @program do |f| %>
+          <%= render :partial => 'shared/errors', :locals => {:object => @program} %>
           <div class='form-group'>
             <%= f.label :name %>
             <%= f.text_field :name, :class => 'form-control' %>

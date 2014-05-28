@@ -59,9 +59,7 @@ describe "program Create/Read/Update", :type => :feature do
 
       click_on("Save")
 
-      within(".program_maximum_age") do
-        page.should have_content("can't be blank")
-      end
+      page.should have_content("Maximum Age can't be blank")
     end
   end
 
@@ -95,9 +93,7 @@ describe "program Create/Read/Update", :type => :feature do
 
       click_on("Save")
 
-      within(".program_name") do
-        page.should have_content("can't be blank")
-      end
+      page.should have_content("Name can't be blank")
     end
   end
 end

@@ -23,6 +23,6 @@ en:
   activerecord:
     attributes:
       program:
-        maximum_participants: "Maximum Participants"
+        maximum_participants: "Maximum Number of Participants"
         minimum_age: "Minimum Age"
         maximum_age: "Maximum Age"
