@@ -3,7 +3,7 @@ require "spec_helper"
 describe "program Create/Read/Update", :type => :feature do
   describe "index" do
     it "lists programs as links to view them" do
-      program = FactoryGirl.create(:program, :name => "PenPals", :maximum_participants => 25)
+      program = FactoryGirl.create(:program, :name => "PenPals")
 
       visit "/programs"
       click_on("PenPals")
@@ -86,7 +86,7 @@ describe "program Create/Read/Update", :type => :feature do
     end
 
     it "shows validation errors" do
-      program = FactoryGirl.create(:program, :name => "PenPals", :maximum_participants => 25, :minimum_age => 10, :maximum_age => 15)
+      program = FactoryGirl.create(:program)
       visit(edit_program_path(program))
 
       fill_in("Name", :with => "")

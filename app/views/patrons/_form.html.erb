@@ -1,0 +1,32 @@
+<div class='row'>
+  <div class='col-md-6'>
+    <div class='panel panel-info'>
+      <div class='panel-body'>
+        <%= form_for @patron do |f| %>
+          <%= render :partial => 'shared/errors', :locals => {:object => @patron} %>
+          <div class='form-group'>
+            <%= f.label :name %>
+            <%= f.text_field :name, :class => 'form-control' %>
+          </div>
+          <div class='form-group'>
+            <%= f.label :age  %>
+            <%= f.number_field :age, :class => 'form-control' %>
+          </div>
+          <div class='form-group'>
+            <%= f.label :address_street %>
+            <%= f.number_field :address_street, :class => 'form-control' %>
+          </div>
+          <div class='form-group'>
+            <%= f.label :address_city %>
+            <%= f.number_field :address_city, :class => 'form-control' %>
+          </div>
+          <div class='form-group'>
+            <%= f.label :address_zipcode %>
+            <%= f.number_field :address_zipcode, :class => 'form-control' %>
+          </div>
+          <%= f.submit "Save", :class => 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

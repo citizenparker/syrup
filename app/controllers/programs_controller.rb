@@ -35,7 +35,7 @@ class ProgramsController < ApplicationController
     if @program.persisted?
       redirect_to program_path(@program)
     else
-      render :edit
+      render :new
     end
   end
 

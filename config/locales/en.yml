@@ -26,3 +26,7 @@ en:
         maximum_participants: "Maximum Number of Participants"
         minimum_age: "Minimum Age"
         maximum_age: "Maximum Age"
+      patron:
+        address_street: "Street Address"
+        address_city: "City"
+        address_zipcode: "Zipcode"

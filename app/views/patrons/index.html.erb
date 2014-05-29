@@ -1,0 +1,13 @@
+<h2>Programs</h2>
+
+<div class='row'>
+  <div class='col-md-6'>
+    <ul class='list-group'>
+      <% @patrons.each do |patron| %>
+        <li class='list-group-item'><%= link_to patron.name, patron_path(patron) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<%= link_to "New Patron", new_patron_path %>
