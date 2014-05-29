@@ -8,12 +8,8 @@
         <td><%= @patron.age %></td>
       </tr>
       <tr>
-        <td>Street Address:</td>
-        <td><%= @patron.address_street %></td>
-      </tr>
-      <tr>
-        <td>City/Zip:</td>
-        <td><%= @patron.address_city %> / <%= @patron.address_zipcode %></td>
+        <td>Address:</td>
+        <td><%= @patron.address_street %><br /><%= @patron.address_city %>, IL <%= @patron.address_zipcode %></td>
       </tr>
       <tr>
         <td colspan=2><%= link_to "Edit", edit_patron_path(@patron) %></td>

@@ -14,15 +14,15 @@
           </div>
           <div class='form-group'>
             <%= f.label :address_street %>
-            <%= f.number_field :address_street, :class => 'form-control' %>
+            <%= f.text_field :address_street, :class => 'form-control' %>
           </div>
           <div class='form-group'>
             <%= f.label :address_city %>
-            <%= f.number_field :address_city, :class => 'form-control' %>
+            <%= f.text_field :address_city, :class => 'form-control' %>
           </div>
           <div class='form-group'>
             <%= f.label :address_zipcode %>
-            <%= f.number_field :address_zipcode, :class => 'form-control' %>
+            <%= f.text_field :address_zipcode, :class => 'form-control' %>
           </div>
           <%= f.submit "Save", :class => 'btn btn-primary' %>
         <% end %>
