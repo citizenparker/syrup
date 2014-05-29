@@ -12,6 +12,10 @@ gem "breadcrumbs_on_rails"
 # Use unicorn as the app server
 gem "unicorn"
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem "factory_girl_rails"
   gem "capybara"
