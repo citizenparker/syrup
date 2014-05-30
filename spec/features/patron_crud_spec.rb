@@ -22,6 +22,7 @@ describe "patron Create/Read/Update", :type => :feature do
       @patron = FactoryGirl.create(:patron,
                                    :name => "Steven Ambrose",
                                    :age => 25,
+                                   :phone_number => "+1 573 268 5192",
                                    :address_street => "123 L'rue",
                                    :address_city => "Bastonne",
                                    :address_zipcode => "00001")
@@ -33,6 +34,7 @@ describe "patron Create/Read/Update", :type => :feature do
       page.should have_content("Steven Ambrose")
       page.should have_content(25)
       page.should have_content("123 L'rue")
+      page.should have_content("+1 573 268 5192")
       page.should have_content("Bastonne")
       page.should have_content("00001")
     end
@@ -51,6 +53,7 @@ describe "patron Create/Read/Update", :type => :feature do
 
       fill_in("Name", :with => "Doogie Howser")
       fill_in("Age", :with => 15)
+      fill_in("Phone Number", :with => "+1 573 268 5192")
       fill_in("Street Address", :with => "123 Main St.")
       fill_in("City", :with => "Roanoke")
       fill_in("Zipcode", :with => "20105")
@@ -61,6 +64,7 @@ describe "patron Create/Read/Update", :type => :feature do
 
       page.should have_content("Doogie Howser")
       page.should have_content(15)
+      page.should have_content("+1 573 268 5192")
       page.should have_content("123 Main St.")
       page.should have_content("Roanoke")
       page.should have_content("20105")
@@ -71,6 +75,7 @@ describe "patron Create/Read/Update", :type => :feature do
 
       fill_in("Name", :with => "Doogie Howser")
       fill_in("Age", :with => 15)
+      fill_in("Phone Number", :with => "+1 573 268 5192")
       fill_in("City", :with => "Roanoke")
       fill_in("Zipcode", :with => "20105")
 
@@ -91,6 +96,7 @@ describe "patron Create/Read/Update", :type => :feature do
 
       fill_in("Name", :with => "Gaius Marius")
       fill_in("Age", :with => 38)
+      fill_in("Phone Number", :with => "+1 573 268 5192")
       fill_in("Street", :with => "123 Mars Hill")
       fill_in("City", :with => "Rome")
       fill_in("Zipcode", :with => "12345")
@@ -100,6 +106,7 @@ describe "patron Create/Read/Update", :type => :feature do
 
       page.should have_content("Gaius Marius")
       page.should have_content(38)
+      page.should have_content("+1 573 268 5192")
       page.should have_content("123 Mars Hill")
       page.should have_content("Rome")
       page.should have_content("12345")

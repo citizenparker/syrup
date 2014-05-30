@@ -30,3 +30,4 @@ en:
         address_street: "Street Address"
         address_city: "City"
         address_zipcode: "Zipcode"
+        phone_number: "Phone Number"

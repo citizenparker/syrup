@@ -40,6 +40,6 @@ class PatronsController < ApplicationController
   end
 
   def _patron_params
-    params[:patron].permit(:name, :address_street, :address_city, :address_zipcode, :age)
+    params[:patron].permit(:name, :address_street, :address_city, :address_zipcode, :age, :phone_number)
   end
 end
